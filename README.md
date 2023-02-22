@@ -120,7 +120,7 @@ conda activate [Name of your conda environment you wish to activate]
     * To deactivate a conda environment:
         * conda deactivate
 
-## [Optional] Open & Run Application on Jupyter Notebook
+## Open & Run Application on Jupyter Notebook (Optional)
 
 * Open OnDemand has a built-in file explorer and file transfer application available directly from its dashboard via:
 
