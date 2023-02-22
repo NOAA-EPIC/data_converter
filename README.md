@@ -120,17 +120,7 @@ conda activate [Name of your conda environment you wish to activate]
     * To deactivate a conda environment:
         * conda deactivate
 
-### Link Home Directory to Dataset Location on RDHPCS Platform
-
-* Unfortunately, there is no way to navigate to the "/work/" filesystem from within the Jupyter interface when working on the remote server, Orion. The best way to workaround is to create a symbolic link in your home folder that will take you to the /work/ filesystem. Run the following command from a linux terminal on Orion to create the link:
-
-    * ln -s /work /home/[Your user account name]/work
-
-* Now, when you navigate to the /home/[Your user account name]/work directory in Jupyter, it will take you to the /work folder. Allowing you to obtain any data residing within the /work filesystem that you have permission to access from Jupyter. This same procedure will work for any filesystem available from the root directory.
-
-*Note: On Orion, user must sym link from their home directory to the main directory containing the datasets of interest.
-
-## Open & Run Application on Jupyter Notebook
+## [Optional] Open & Run Application on Jupyter Notebook
 
 * Open OnDemand has a built-in file explorer and file transfer application available directly from its dashboard via:
 
