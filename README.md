@@ -174,26 +174,22 @@ Within the download, you will find the following directories and files:
     * 
 * Scripts:
     * Modules:
-        * get_data.py
-            * Extracts the data directories of a tar & partitions data by external model used in the creation of model analysis files. 
-         * upload_data.py
-            * Uploads the UFS Land DA Application via AWS SDK
-        * progress_bar.py
-            * Monitors uploading progress of datasets to cloud   
+        * .py
+            * 
+        *  .py
+            *
+        *  .py
+            *   
     * Main:
-        * upload_file2cloud.py
-            * Main executable script for extracting & uploading the full Land DA datasets residing on-prem to cloud. Sets
-            unique key for the tar.gz data supporting the Land DA. Note: Must save data of interest to migrate to cloud within the repository's "main" folder 
-            & structure it on-premise as you would like it structured in cloud. For example, the relative directory of "landda-data-2016.tar.gz" should be saved as   "current_land_da_release_data/landda-data-2016.tar.gz" within the "main" folder on-premise for the object's key to be set as "current_land_da_release_data/landda-data-2016.tar.gz" in cloud.
-        * get_objects_list.py
-            * Obtains list of unique data files within the Land DA cloud storage
-        * delete_cloud_object.py
-            * Main executable script for deleting the objects of the Land DA in datasets in cloud based on their unique key.
+        * .py
+            * Main executable script for 
+        * .py
+            *  Main executable script for 
 
 * List of Dependencies: 
-    * cloud_xfer_env.yml
+    * data_converter.yml
 
 # Documentation
 
 # Version:
-* Draft as of
+* Draft as of 
