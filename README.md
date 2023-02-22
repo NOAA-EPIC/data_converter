@@ -34,12 +34,6 @@ Tools which could be be utilized to perform data transferring & partitioning (Mu
 * AWS CLI
 * AWS S3 REST API
 
-In this demontration, the framework will implement Python AWS SDK for transferring datasets from the RDHPCS, Orion, to the cloud data storage with low latency. 
-
-The AWS SDK will be implemented for the following reasons:
-To integrate with other python scripts.
-AWS SDK carries addition capabilities/features for data manipulation & transferring compare to the aforementioned alternate tools.
-
 # Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Dataset](#Dataset)
@@ -52,7 +46,6 @@ AWS SDK carries addition capabilities/features for data manipulation & transferr
 
 # Prerequisites
 * Python 3.9
-* Setting up AWS CLI configurations for uploading to Cloud.
 * Setting up conda environment w/in RDHPCS.
     * Refer to [Environment Setup](#Environment-Setup)
 
