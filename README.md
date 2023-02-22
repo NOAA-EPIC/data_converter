@@ -19,7 +19,7 @@ Data Converter
 
 __Purpose:__
 
-The purpose of this program is to transfer datasets residing within the RDHPCS to cloud data storage via chaining API calls to communicate with its cloud data storage bucket. The program will support the data required for various UFS applications' release versions.
+The purpose of this program is to convert NetCDF to Zarr data. The program will support the developers of the various UFS applications.
 
 According to Amazon AWS, the following conditions need to be considered when transferring data to cloud data storage:
 
@@ -40,13 +40,6 @@ The AWS SDK will be implemented for the following reasons:
 To integrate with other python scripts.
 AWS SDK carries addition capabilities/features for data manipulation & transferring compare to the aforementioned alternate tools.
 
-
-__Capabilities:__
-
-The framework will be able to perform the following actions:
-
-Multi-threading & partitioning to the datasets to assist in the optimization in uploading performance of the datasets from on-prem to cloud. 
-
 # Table of Contents
 * [Prerequisites](#Prerequisites)
 * [Dataset](#Dataset)
@@ -64,7 +57,7 @@ Multi-threading & partitioning to the datasets to assist in the optimization in 
     * Refer to [Environment Setup](#Environment-Setup)
 
 # Dataset
-Datasets on-premise:
+Datasets on-premise.
 
 # Quick Start
 1) Install miniconda per "Environment Setup" section.
