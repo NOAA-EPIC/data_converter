@@ -43,14 +43,21 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
    
       * <bucket_arn>: Cloud bucket's Amazon Resource Name (ARN). Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds', 'noaa-ufs-srw-pds' 
       * <key>: Key of the object in cloud.
-      * save_as_fn (str): Name to save downloaded file as on local disk.
+      * <save_as_fn>: Name to save downloaded file as on local disk.
 
 Note: The object will be located under **/raw_data.**
 
 5) Execute the following command to convert the netCDF data file to zarr.
 
    * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <modifymultivars_if_applicable>
+      * filename>: Name of the file of interest (e.g. filename.nc, filename.nc4) located under ../raw_data.
 
+      * filename2save>: Name to save zarr as under ../zarr_data.
+
+      * modifymultivars>: Multi-dimensional variable(s) which will require modification in naming convention
+                             due to its duplication in variable. Reason: Some netCDF files will require variable names
+                             to be refactored because Xarray will not allow for duplicated variables due to conflicts
+                             to its restriction. If the file does not feature duplication in variables, then set to None. 
 7) 
 
 # Environment Setup:
