@@ -42,7 +42,6 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
    * python main_s3_download.py -b <bucket_arn> -k <key> -z <save_as_fn> 
    
       * <bucket_arn>: Cloud bucket's Amazon Resource Name (ARN). Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds', 'noaa-ufs-srw-pds' 
-   
       * <key>: Key of the object in cloud.
    
       * <save_as_fn>: Name to save downloaded file as on local disk.
