@@ -19,20 +19,7 @@ Data Converter
 
 __Purpose:__
 
-The purpose of this program is to convert NetCDF to Zarr data. The program will support the developers of the various UFS applications.
-
-According to Amazon AWS, the following conditions need to be considered when transferring data to cloud data storage:
-
-* Largest object that can be uploaded in a single PUT is 5 GB.
-* Individual Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 TB.
-* For objects larger than 100 MB, Amazon recommends using the Multipart Upload capability.
-* The total volume of data in a cloud data storage bucket are unlimited.
-
-Tools which could be be utilized to perform data transferring & partitioning (Multipart Upload/Download) are:
-
-* AWS SDK
-* AWS CLI
-* AWS S3 REST API
+The purpose of this program is to convert NetCDF to Zarr data. The program will support the developers working on UFS-based applications.
 
 # Table of Contents
 * [Prerequisites](#Prerequisites)
