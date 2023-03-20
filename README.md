@@ -1,6 +1,6 @@
 
 <h1 align="center">
-Data Converter to Zarr
+Data Converter for Zarr Conversions
 </h1>
 
 [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [Status](#Status) • [What's Included](#What's-Included) • [Documentation](#Documentation) • [References](#Reference(s))
