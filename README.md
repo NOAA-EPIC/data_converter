@@ -93,7 +93,7 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
 
          * combine_by (str): Method to combine all data within zarr. Some options: "nested" or "by_coords"
    
- **Note:** The newly converted data will be located under **/nc_data.**
+ **Note:** The newly converted data will be located under **/nc_data**. If a file with the requested filename already exist under **/nc_data**, then the file with the given filename of interest will be overwritten after **main_zarr2nc.py** is executed.
    
 
 # Environment Setup:
