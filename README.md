@@ -78,7 +78,7 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
    
 8) Execute the following command to load a zarr.
    
-      * python main_load_zarr.py -f <filename> -v <variable> 
+      * python main_load_zarr.py -z <filename> -v <variable> 
    
          * filename (str): Name of Zarr under file directory (Default:../zarr_data).
                          Example: './zarr_data/sfcf000.nc_ondisk.zarr'
