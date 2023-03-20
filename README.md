@@ -3,7 +3,7 @@
 Data Converter to Zarr
 </h1>
 
-[Prerequisites](#Prerequisites) • [Dataset](#Dataset) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [Status](#Status) • [What's Included](#What's-Included) • [Documentation](#Documentation) • [References](#Reference(s))
+[Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [Status](#Status) • [What's Included](#What's-Included) • [Documentation](#Documentation) • [References](#Reference(s))
 </h5>
 
 # About
@@ -27,17 +27,11 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
 * Setting up conda environment w/in RDHPCS.
     * Refer to [Environment Setup](#Environment-Setup)
 
-# Dataset
-Datasets on-premise.
-
 # Quick Start
 1) Install miniconda per "Environment Setup" section.
 2) Establish AWS credentials configuration file via the "AWS Command Line Interface (AWS CLI) Credentials Setup" page in Confluence.
-3) [Option to download file from S3.]
-4) Execute the following command within the terminal to migrate the data to cloud: python #########.py -b BUCKET_NAME -f FILE_DIR_TO_CONVERT_INCLUDING_FILENAME
-* BUCKET_NAME = land-da
-* FILE_DIR_TO_MIGRATE_TO_CLOUD_INCLUDING_FILENAME: For example, the object's key would be formatted in cloud as " ############/##########.nc." So,  FILE_DIR_TO_MIGRATE_TO_CLOUD_INCLUDING_FILENAME = ############/##########.nc.
-
+3) If applicable, execute the following command within the terminal to download an object from cloud -- otherwise, save the data in need of conversion under **/raw_data**.
+4) 
 
 # Environment Setup:
 
