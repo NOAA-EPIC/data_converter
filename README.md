@@ -28,10 +28,30 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
     * Refer to [Environment Setup](#Environment-Setup)
 
 # Quick Start
-1) Install miniconda per "Environment Setup" section.
-2) Establish AWS credentials configuration file via the "AWS Command Line Interface (AWS CLI) Credentials Setup" page in Confluence.
-3) If applicable, execute the following command within the terminal to download an object from cloud -- otherwise, save the data in need of conversion under **/raw_data**.
-4) 
+1) Install miniconda per the "Environment Setup" section.
+2) Create a conda environment based on the YAML file provided within this repository via executing the following command:
+
+    * conda env create -f environment.yml
+    
+3) Activate the conda environment via executing the following command:
+
+    * conda activate data_converter
+    
+4) Save the data in need of conversion under **/raw_data**. If an object needs to be download from Amazon Web Services (AWS) S3 storage, then execute the following command within your terminal:
+
+   * python main_s3_download.py -b <bucket_arn> -k <key> -z <save_as_fn> 
+   
+      * <bucket_arn>: Cloud bucket's Amazon Resource Name (ARN). Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds', 'noaa-ufs-srw-pds' 
+      * <key>: Key of the object in cloud.
+      * save_as_fn (str): Name to save downloaded file as on local disk.
+
+Note: The object will be located under **/raw_data.**
+
+5) Execute the following command to convert the netCDF data file to zarr.
+
+   * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <modifymultivars_if_applicable>
+
+7) 
 
 # Environment Setup:
 
