@@ -78,22 +78,22 @@ The purpose of this program is to convert NetCDF to Zarr data. The program will 
    
 8) Execute the following command to load a zarr.
    
-      * python main_load_zarr.py -z <filename> -v <variable> 
+      * python main_load_zarr.py -z <zarr_store> -v <variable> 
    
-         * filename (str): Name of Zarr under file directory (Default:../zarr_data).
-                         Example: './zarr_data/sfcf000.nc_ondisk.zarr'
+         * zarr_store (str): Name of the zarr_store (e.g. filename.zarr) located under 
+                           the default directory, ../zarr_data.
 
-         * variable (str): Zarr's variable of interest.
+         * variable (str): Variable of interest from zarr.
 
 9) If applicable, execute the following command to convert zarr to netCDF.
    
-      * ###
+      * python main_zarr2nc.py -z <zarr_store> -c <combine_by> 
    
+         * zarr_store (str): zarr_store (e.g. name of the zarr store).
+
+         * combine_by (str): Method to combine all data within zarr. Some options: "nested" or "by_coords"
    
  **Note:** The newly converted data will be located under **/nc_data.**
-
-   
-   
    
 
 # Environment Setup:
