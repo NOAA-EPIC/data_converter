@@ -31,19 +31,17 @@ The purpose of this application is to allow users to convert multidimensional to
 1) Install miniconda per the "Environment Setup" section.
 2) Create a conda environment based on the YAML file provided within this repository via executing the following command:
 
-**    * conda env create -f data_converter.yml
-    
-**
+   * conda env create -f data_converter.yml
+
 
 3) Activate the conda environment via executing the following command:
 
-**    * conda activate data_converter
-**    
+   * conda activate data_converter
 
 4) Save the data in need of conversion under **/raw_data**. If an object needs to be downloaded from Amazon Web Services (AWS) S3 storage, then execute the following command within your terminal:
 
-**   * python main_s3_download.py -b <bucket_arn> -k <key> -z <save_as_fn> 
-**   
+   * python main_s3_download.py -b <bucket_arn> -k <key> -z <save_as_fn> 
+
       * bucket_arn (str): Cloud bucket's Amazon Resource Name (ARN). Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds', 'noaa-ufs-srw-pds' 
    
       * key (str): Key of the object in cloud.
@@ -54,8 +52,8 @@ The purpose of this application is to allow users to convert multidimensional to
 
 5) Execute the following command to convert a netCDF data file to Zarr.
 
-**   * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <modifymultivars_if_applicable>
-**   
+   * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <modifymultivars_if_applicable>
+
       * filename (str): Name of the file of interest (e.g. filename.nc, filename.nc4) located under ../raw_data.
 
       * filename2save (str): Name to save zarr as under ../zarr_data.
@@ -69,8 +67,8 @@ The purpose of this application is to allow users to convert multidimensional to
    
 7) Execute the following command to convert a GRIB file to Zarr. **Note:** Some of the GRIB files will require users to filter the data by its key, in order to convert the data to Zarr. In many cases, a key will have to be declared if a GRIB file features a unique key with many different values. For example, it was tested that some of the UFS .GrbF## formatted files presented a unique key with many different values. In this case, the conversion of the GRIB file to Xarray & Zarr must be performed while filtering the data by its key.
 
-**   *  python main_grb2zarr_converter.py -f <filename> -z <filename2save> -k <grb_key> <grb_keyN_(if_applicable)> -v <grb_val> <grb_valN_(if_applicable)>
-**   
+   *  python main_grb2zarr_converter.py -f <filename> -z <filename2save> -k <grb_key> <grb_keyN_(if_applicable)> -v <grb_val> <grb_valN_(if_applicable)>
+
       * filename(str): Name of the file of interest (e.g. filename.grb, filename.GrbF##) located under ../raw_data.
 
       * grb_key (str): Unique .Grb key of interest.
@@ -83,8 +81,8 @@ The purpose of this application is to allow users to convert multidimensional to
    
 8) Execute the following command to load a Zarr.
    
-**      * python main_load_zarr.py -z <zarr_store> -v <variable> 
-**   
+   * python main_load_zarr.py -z <zarr_store> -v <variable> 
+
          * zarr_store (str): Name of the zarr_store (e.g. filename.zarr) located under 
                            the default directory, ../zarr_data.
 
@@ -92,8 +90,8 @@ The purpose of this application is to allow users to convert multidimensional to
 
 9) If applicable, execute the following command to convert Zarr to netCDF.
    
-**      * python main_zarr2nc.py -z <zarr_store> -c <combine_by> 
-**   
+   * python main_zarr2nc.py -z <zarr_store> -c <combine_by> 
+
          * zarr_store (str): name of the zarr store
 
          * combine_by (str): Method to combine all data within zarr. Some options: "nested" or "by_coords"
