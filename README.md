@@ -4,12 +4,12 @@ Data Converter for Xarray & Zarr Conversion
 </h1>
 
 <p align="center">
-    <img src="images/header.png" width="200" height="225">
-    <img src="images/header3.png" width="200" height="225">
-    <img src="images/header2.png" width="200" height="225">
-    <img src="images/header4.png" width="200" height="125">
-    <img src="images/header5.png" width="200" height="125">
-    <img src="images/header6.png" width="200" height="125">
+    <img src="images/header.png" width="250" height="225">
+    <img src="images/header3.png" width="250" height="225">
+    <img src="images/header2.png" width="250" height="225">
+    <img src="images/header4.png" width="250" height="125">
+    <img src="images/header5.png" width="250" height="125">
+    <img src="images/header6.png" width="250" height="125">
 </p>
 
 <h5 align="center">
