@@ -42,40 +42,48 @@ The purpose of this application is to allow users to convert multidimensional to
 
    * python main_s3_download.py -b <bucket_arn> -k <key> -z <save_as_fn> 
 
-      * bucket_arn (str): Cloud bucket's Amazon Resource Name (ARN). Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds', 'noaa-ufs-srw-pds' 
-   
+      * bucket (str): Cloud bucket's Amazon Resource Name (ARN). 
+              Options: 'noaa-ufs-regtests-pds', 'noaa-ufs-land-da-pds',
+              'noaa-ufs-srw-pds'
       * key (str): Key of the object in cloud.
-   
-      * save_as_fn (Str): Name to save downloaded file as on local disk.
+      * save_as_fn (str): Name to save object as file.
 
 **Note:** After execution, the object will be migrated to the following folder, **/raw_data.**
 
 5) Execute the following command to convert a netCDF data file to Zarr.
 
-   * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <modifymultivars_if_applicable>
+   * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <refactor_variables_if_applicable>
 
-      * filename (str): Name of the file of interest (e.g. filename.nc, filename.nc4) located under ../raw_data.
+      * filename(str): Name of the file of interest location of the raw (unprocessed) files (default: "../raw_data")
+                       Include file extension (e.g. .nc, .nc4).
+               
+      * filename2save(str): Name to save Zarr as under ../zarr_data.
 
-      * filename2save (str): Name to save zarr as under ../zarr_data.
-
-      * modifymultivars (str): Multi-dimensional variable(s) which will require modification in naming convention
-                              due to its duplication in variable. Reason: Some netCDF files will require variable names
-                              to be refactored because Xarray will not allow for duplicated variables due to conflicts
-                              to its restriction. If the file does not feature duplication in variables, then set to None. 
+      * refactor_variables (list): List of multidimensional variables for which will require refactoring in their 
+                                 naming convention. In some cases, a multidimensional data will require refactoring
+                                 specific multidimensional variables when using the Xarray package. This is due to Xarray's
+                                 restirction on duplicated variable names shared between coordinates & dimension variables. 
+                                 Xarray will not allow for these duplicated variable names as it conflicts to its
+                                 restriction. As a result, some netCDF files will require variable names
+                                 to be refactored. If a file does not feature duplication in variables, then set argument
+                                 to None. Default: None.
    
 **Note:** The newly converted data will be located under **/zarr_data.** After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
    
 7) Execute the following command to convert a GRIB file to Zarr. **Note:** Some of the GRIB files will require users to filter the data by its key, in order to convert the data to Zarr. In many cases, a key will have to be declared if a GRIB file features a unique key with many different values. For example, it was tested that some of the UFS .GrbF## formatted files presented a unique key with many different values. In this case, the conversion of the GRIB file to Xarray & Zarr must be performed while filtering the data by its key.
 
-   *  python main_grb2zarr_converter.py -f <filename> -z <filename2save> -k <grb_key> <grb_keyN_(if_applicable)> -v <grb_val> <grb_valN_(if_applicable)>
+   * python main_grb2zarr_converter.py -f <filename> -z <filename2save> -k <GRIB_KEY_1 GRIB_VALUE_2 ... GRIB_KEY_N_(if_applicable)> -v <GRIB_VALUE_1 GRIB_VALUE_2 ... GRIB_VALUE_N_(if_applicable)>
 
       * filename(str): Name of the file of interest (e.g. filename.grb, filename.GrbF##) located under ../raw_data.
-
-      * grb_key (str): Unique .Grb key of interest.
-
-      * grb_val (str): .Grb value corresponding to unique .Grb key of interest.
-
-      * filename2save(str): Name to save zarr as under ../zarr_data.      
+      * filename2save(str): Name to save Zarr as under ../zarr_data.            
+      * grb_key (str): Unique GRIB's Xarray key of interest. In some cases, GRIB files (e.g. .Grbf##) may feature
+                       multiple values of a unique key per variable. This will require the user to filter
+                       the GRIB's Xarray by its unique key because Xarray package retricts representing a
+                       GRIB file that contains more than one hypercube of the same variable.
+      * grb_val (str): Unique GRIB's Xarray value to the GRB key of interest. In some cases, GRIB files (e.g. .Grbf##) may feature
+                       multiple values of a unique key per variable. This will require the user to filter
+                       the GRIB's Xarray by its unique key-to-value pair because Xarray package retricts representing a
+                       GRIB file that contains more than one hypercube of the same variable.   
    
 **Note:** The newly converted data will be located under **/zarr_data.** After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
    
@@ -83,18 +91,19 @@ The purpose of this application is to allow users to convert multidimensional to
    
    * python main_load_zarr.py -z <zarr_store> -v <variable> 
 
-         * zarr_store (str): Name of the zarr_store (e.g. filename.zarr) located under 
-                           the default directory, ../zarr_data.
-
-         * variable (str): Variable of interest from zarr.
+         * zarr_store (str): Name of the Zarr under the location of the 
+                  zarr files (default: "../zarr_data"). 
+   
+         * variable (str): Variable of interest within Zarr.
 
 9) If applicable, execute the following command to convert Zarr to netCDF.
    
    * python main_zarr2nc.py -z <zarr_store> -c <combine_by> 
-
-         * zarr_store (str): name of the zarr store
-
-         * combine_by (str): Method to combine all data within zarr. Some options: "nested" or "by_coords"
+   
+      * zarr_store (str): Name of the Zarr store.
+   
+      * combine_by (str): Method to combine all data within Zarr. 
+                        Some options: "nested" or "by_coords"
    
 **Note:** The newly converted data will be saved under **/nc_data**. After execution, the file with the given filename of interest will be overwritten if the filename already exist under **/nc_data**.
    
