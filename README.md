@@ -50,16 +50,16 @@ The purpose of this application is to allow users to convert multidimensional to
    
       * save_as_fn (str): Name to save object as file.
 
-**Note:** After execution, the object will be migrated to the following folder, **/raw_data.**
+**Note:** After execution, the object will be migrated to the following folder, **/raw_data**.
 
 5) Execute the following command to convert a netCDF data file to Zarr.
 
    * python main_nc2zarr_converter.py -f <filename> -z <filename2save> -d <refactor_variables_if_applicable>
 
-      * filename(str): Name of the file of interest location of the raw (unprocessed) files (default: "../raw_data")
+      * filename(str): Name of the file of interest location of the raw (unprocessed) files (default: **/raw_data**)
                        Include file extension (e.g. .nc, .nc4).
                
-      * filename2save(str): Name to save Zarr as under ../zarr_data.
+      * filename2save(str): Name to save Zarr as under **/zarr_data**.
 
       * refactor_variables (list): List of multidimensional variables for which will require refactoring in their 
                                    naming convention. In some cases, a multidimensional data will require refactoring
@@ -70,15 +70,15 @@ The purpose of this application is to allow users to convert multidimensional to
                                    to be refactored. If a file does not feature duplication in variables, then set argument
                                    to None. Default: None.
    
-**Note:** The newly converted data will be located under **/zarr_data.** After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
+**Note:** The newly converted data will be located under **/zarr_data*.* After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
    
 7) Execute the following command to convert a GRIB file to Zarr. **Note:** Some of the GRIB files will require users to filter the data by its key, in order to convert the data to Zarr. In many cases, a key will have to be declared if a GRIB file features a unique key with many different values. For example, it was tested that some of the UFS .GrbF## formatted files presented a unique key with many different values. In this case, the conversion of the GRIB file to Xarray & Zarr must be performed while filtering the data by its key.
 
    * python main_grb2zarr_converter.py -f <filename> -z <filename2save> -k <GRIB_KEY_1 GRIB_VALUE_2 ... GRIB_KEY_N_(if_applicable)> -v <GRIB_VALUE_1 GRIB_VALUE_2 ... GRIB_VALUE_N_(if_applicable)>
 
-      * filename(str): Name of the file of interest (e.g. filename.grb, filename.GrbF##) located under ../raw_data.
+      * filename(str): Name of the file of interest (e.g. filename.grb, filename.GrbF##) located under **/raw_data**.
    
-      * filename2save(str): Name to save Zarr as under ../zarr_data.            
+      * filename2save(str): Name to save Zarr as under **/zarr_data**.            
    
       * grb_key (str): Unique GRIB's Xarray key of interest. In some cases, GRIB files (e.g. .Grbf##) may feature
                        multiple values of a unique key per variable. This will require the user to filter
@@ -90,14 +90,14 @@ The purpose of this application is to allow users to convert multidimensional to
                        the GRIB's Xarray by its unique key-to-value pair because Xarray package retricts representing a
                        GRIB file that contains more than one hypercube of the same variable.   
    
-**Note:** The newly converted data will be located under **/zarr_data.** After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
+**Note:** The newly converted data will be located under **/zarr_data**. After execution, if a Zarr with the given name of interest already exist under **/zarr_data**, then the user will have to either declare a new name for the zarr or remove the exisitng zarr residing within **/zarr_data**.
    
 8) Execute the following command to load a Zarr.
    
    * python main_load_zarr.py -z <zarr_store> -v <variable> 
 
       * zarr_store (str): Name of the Zarr under the location of the 
-                          zarr files (default: "../zarr_data"). 
+                          zarr files (default: **/zarr_data**). 
 
       * variable (str): Variable of interest within Zarr.
 
