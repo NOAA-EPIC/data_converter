@@ -42,7 +42,7 @@ The purpose of this application is to allow users to convert multidimensional to
     * Refer to [Environment Setup](#Environment-Setup)
 
 # Quick Start
-1) Install miniconda per the "Environment Setup" section.
+1) Install miniconda per the [Environment Setup](#Environment-Setup) section.
 2) Create a conda environment based on the YAML file provided within this repository via executing the following command:
 
    * conda env create -f data_converter.yml
@@ -213,7 +213,7 @@ To create a .yml file, execute the following commands:
 # What's Included
 Within the download, you will find the following directories and files:
 * Demo:
-    * Refer to scripts under **Main** section.
+    * Refer [What's Included](#What's-Included) **Main** section.
 * Scripts:
     * Modules:
         * data_converter.py
