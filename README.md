@@ -214,17 +214,27 @@ Within the download, you will find the following directories and files:
     * 
 * Scripts:
     * Modules:
-        * .py
-            * 
-        *  .py
-            *
-        *  .py
-            *   
+        * data_converter.py
+            * Module comprised of methods for converting multidimensional data (e.g. netCDF, GRIB) to Xarray & Zarr.
+        *  zarr2nc.py
+            *  Module comprised of methods for converting Zarr to netCDF.
+        *  load_zarr_data.py
+            *  Module comprised of methods for loading Zarr as Dask Array.
+        *  download_data.py
+            *  Module comprised of methods for downloading data from cloud storage.
     * Main:
-        * .py
-            * Main executable script for 
-        * .py
-            *  Main executable script for 
+        * main_nc2zarr_converter.py
+            * Main executable script for converting netCDF to Zarr
+        * main_grb2zarr_converter.py
+            *  Main executable script for converting GRIB to Zarr.
+        * main_load_zarr.py
+            * Main executable script for loading Zarr.
+        * main_zarr2nc.py
+            *  Main executable script for revert Zarr to netCDF.
+        * load_nc_data.py
+            *  Main executable script for loading a netCDF.
+        * main_s3_download.py
+            *  Main executable script for downloading object from cloud storage.
 
 * List of Dependencies: 
     * data_converter.yml
