@@ -211,7 +211,7 @@ To create a .yml file, execute the following commands:
 # What's Included
 Within the download, you will find the following directories and files:
 * Demo:
-    * 
+    * Refer to scripts under **Main** section.
 * Scripts:
     * Modules:
         * data_converter.py
@@ -242,4 +242,4 @@ Within the download, you will find the following directories and files:
 # Documentation
 
 # Version:
-* Draft as of 
+* Draft as of 03/24/23
