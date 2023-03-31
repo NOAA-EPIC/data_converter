@@ -1,6 +1,10 @@
 
 <h1 align="center">
-Data Converter: Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
+Data Converter:
+</h1>
+
+<h1 align="center">
+Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 </h1>
 
 <p align="center">
