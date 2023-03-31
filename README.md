@@ -1,6 +1,6 @@
 
 <h1 align="center">
-Data Converter for Xarray & Zarr Conversion
+Data Converter for Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array.
 </h1>
 
 <p align="center">
@@ -24,7 +24,7 @@ Data Converter for Xarray & Zarr Conversion
 
 __Purpose:__
 
-The purpose of this application is to allow users to convert multidimensional to Xarray & Zarr. The will support developers working on UFS-based applications.
+The purpose of this application is to allow users to convert & load multidimensional to Xarray, Zarr, & Dask Array.
 
 # Table of Contents
 * [Prerequisites](#Prerequisites)
