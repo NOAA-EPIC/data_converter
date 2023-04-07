@@ -20,7 +20,7 @@ Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 
 <h5 align="center">
     
-[Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
+• [About](#About) • [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
 
 </h5>
 
@@ -31,6 +31,7 @@ __Purpose:__
 The purpose of this application is to allow users to convert & load multidimensional to Xarray, Zarr, & Dask Array.
 
 # Table of Contents
+* [About](#About)
 * [Prerequisites](#Prerequisites)
 * [Dataset](#Dataset)
 * [Quick Start](#Quick-Start)
