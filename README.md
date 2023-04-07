@@ -20,7 +20,7 @@ Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 
 <h5 align="center">
     
-• [Table of Contents](#Table of Contents) • [About](#About) • [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
+[About](#About) • [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
 
 </h5>
 
