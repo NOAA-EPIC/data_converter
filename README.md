@@ -20,7 +20,7 @@ Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 
 <h5 align="center">
     
-[Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [Status](#Status) • [What's Included](#What's-Included) • [Documentation](#Documentation) • [References](#Reference(s)) • [Version](#Version)
+[Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
 
 </h5>
 
@@ -35,10 +35,9 @@ The purpose of this application is to allow users to convert & load multidimensi
 * [Dataset](#Dataset)
 * [Quick Start](#Quick-Start)
 * [Environment Setup](#Environment-Setup)
-* [Status](#Status)
 * [What's Included](#What's-Included)
-* [Documentation](#Documentation)
-* [References](#Reference(s))
+* [Status](#Status)
+* [Version](#Version)
 
 # Prerequisites
 * Python 3.9
@@ -210,23 +209,10 @@ To create a .yml file, execute the following commands:
 
     * conda env export > [ENVIRONMENT FILENAME].yml
 
-# Status
-    
-This repository is under development and has not yet been released to the public. Interested parties are welcome to explore the code and see what we are working on. However, user support is not available for this tool, and outside contributions to the repository are not being accepted at this time. We look forward to providing user support after a future public release (date TBD), at which point, community contributions will also be welcome. In the meantime, users may use this application at their own risk.
-
-DISCLAIMER
-
-The United States Department of Commerce (DOC) GitHub project code is provided on an “as is” basis and the user assumes responsibility for its use. DOC has relinquished control of the information and no longer has a responsibility to protect the integrity, confidentiality, or availability of the information. Any claims against the Department of Commerce stemming from the use of its GitHub project will be governed by all applicable Federal laws. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation, or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
-
-[![Version badge](https://img.shields.io/badge/Python-3.9-blue.svg)](https://shields.io/)
-[![Build badge](https://img.shields.io/badge/Build--gray.svg)](https://shields.io/)
-    
-
-
 # What's Included
 Within the download, you will find the following directories and files:
 * Demo:
-    * Refer [What's Included](#What's-Included) **Main** section.
+    * Refer to the **Main** section under [What's Included](#What's-Included).
 * Scripts:
     * Modules:
         * data_converter.py
@@ -254,5 +240,16 @@ Within the download, you will find the following directories and files:
 * List of Dependencies: 
     * data_converter.yml
 
+# Status
+    
+This repository is under development and has not yet been released to the public. Interested parties are welcome to explore the code and see what we are working on. However, user support is not available for this tool, and outside contributions to the repository are not being accepted at this time. We look forward to providing user support after a future public release (date TBD), at which point, community contributions will also be welcome. In the meantime, users may use this application at their own risk.
+
+DISCLAIMER
+
+The United States Department of Commerce (DOC) GitHub project code is provided on an “as is” basis and the user assumes responsibility for its use. DOC has relinquished control of the information and no longer has a responsibility to protect the integrity, confidentiality, or availability of the information. Any claims against the Department of Commerce stemming from the use of its GitHub project will be governed by all applicable Federal laws. Any reference to specific commercial products, processes, or services by service mark, trademark, manufacturer, or otherwise, does not constitute or imply their endorsement, recommendation, or favoring by the Department of Commerce. The Department of Commerce seal and logo, or the seal and logo of a DOC bureau, shall not be used in any manner to imply endorsement of any commercial product or activity by DOC or the United States Government.
+
+[![Version badge](https://img.shields.io/badge/Python-3.9-blue.svg)](https://shields.io/)
+[![Build badge](https://img.shields.io/badge/Build--gray.svg)](https://shields.io/)
+    
 # Version:
 * Draft as of 03/24/23
