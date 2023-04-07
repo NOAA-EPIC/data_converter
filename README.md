@@ -31,9 +31,9 @@ __Purpose:__
 The purpose of this application is to allow users to convert & load multidimensional to Xarray, Zarr, & Dask Array.
 
 # Prerequisites
-* [![Version badge](https://img.shields.io/badge/Python-3.9-blue.svg)](https://shields.io/)
 * Setting up conda environment w/in RDHPCS.
     * Refer to [Environment Setup](#Environment-Setup)
+* [![Version badge](https://img.shields.io/badge/Python-3.9-blue.svg)](https://shields.io/)
 
 # Quick Start
 1) Install miniconda per the [Environment Setup](#Environment-Setup) section.
