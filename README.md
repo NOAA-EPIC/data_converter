@@ -20,15 +20,9 @@ Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 
 <h5 align="center">
     
-• [About](#About) • [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
+• [Table of Contents](#Table of Contents) • [About](#About) • [Prerequisites](#Prerequisites) • [Quick Start](#Quick-Start) • [Environment Setup](#Environment-Setup) • [What's Included](#What's-Included) • [Status](#Status) • [Version](#Version)
 
 </h5>
-
-# About
-
-__Purpose:__
-
-The purpose of this application is to allow users to convert & load multidimensional to Xarray, Zarr, & Dask Array.
 
 # Table of Contents
 * [About](#About)
@@ -39,6 +33,12 @@ The purpose of this application is to allow users to convert & load multidimensi
 * [What's Included](#What's-Included)
 * [Status](#Status)
 * [Version](#Version)
+
+# About
+
+__Purpose:__
+
+The purpose of this application is to allow users to convert & load multidimensional to Xarray, Zarr, & Dask Array.
 
 # Prerequisites
 * [![Version badge](https://img.shields.io/badge/Python-3.9-blue.svg)](https://shields.io/)
