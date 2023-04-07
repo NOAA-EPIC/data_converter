@@ -24,16 +24,6 @@ Converting & Loading Multidimensional Data as Xarray, Zarr, & Dask Array
 
 </h5>
 
-# Table of Contents
-* [About](#About)
-* [Prerequisites](#Prerequisites)
-* [Dataset](#Dataset)
-* [Quick Start](#Quick-Start)
-* [Environment Setup](#Environment-Setup)
-* [What's Included](#What's-Included)
-* [Status](#Status)
-* [Version](#Version)
-
 # About
 
 __Purpose:__
